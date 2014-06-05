@@ -1,4 +1,5 @@
-<form method='post' action='${pageContext.request.contextPath}/login'>
+<form method='post' action='${pageContext.request.contextPath}/login'
+	  onsubmit="return validate(this);">
   <table width='500'>
   <tbody>
 	<tr>

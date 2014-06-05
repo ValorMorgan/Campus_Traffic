@@ -39,6 +39,7 @@ public class lotGet extends HttpServlet {
 		DBAccess.openDatabase(ds);
 		
 		String lotName = (String)request.getParameter("lotList");
+		System.out.println(lotName);
 		ParkingLot yourLot = DBAccess.getParkingLot(lotName);
 
 		request.setAttribute("yourLot", yourLot);

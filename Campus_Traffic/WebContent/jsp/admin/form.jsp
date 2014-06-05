@@ -1,5 +1,6 @@
 <div>
-	<form id='obstructionInsertForm' method='post' action='${pageContext.request.contextPath}/Admin'>
+	<form id='obstructionInsertForm' method='post' action='${pageContext.request.contextPath}/Admin'
+		  onsubmit="return validate(this);">
 	<fieldset>
 	  <table width='500'>
 		  <tbody>
@@ -20,7 +21,9 @@
 			 </td>
 			</tr>
 			<tr>
+			 <td>
 				<textarea id="obstructionDescription" cols="20" rows="2" name="obstructionDescription" form="obstructionInsertForm"></textarea>
+			 </td>
 			</tr>
 			<tr>
 			 <td>
