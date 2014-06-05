@@ -38,26 +38,3 @@
 			</form>
 		</table>
 
-<%--  Obstruction Remove Form
-<div>
-	<form id='obstructionRemoveForm' method='post' action='${pageContext.request.contextPath}/Admin'>
-	<fieldset>
-	  <table width='500'>
-		  <tbody>
-			<tr>
-			 <td>
-			 Street Name: 
-			 <input id="streetName" type="text" name="streetName"/>
-			 </td>
-			</tr>
-			
-			<tr>
-			 <td>
-			  <input type="submit" name="obstructionSubmit" value="Submit Removes">
-			 </td>
-			</tr>
-		  </tbody>
-	  </table>
-	</fieldset>
-	</form>
-</div> --%>
