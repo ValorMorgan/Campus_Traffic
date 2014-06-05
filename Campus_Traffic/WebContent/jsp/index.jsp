@@ -23,17 +23,6 @@
 			<c:forEach var='lot' begin='0' items='${lots.rows}'>
 				<option value='${lot.Lot_Name}'>Lot ${lot.Lot_Name}</option>
 			</c:forEach>
-<!--		<option value="79">Lot 79</option>
-			<option value="79e">Lot 79e</option>
-			<option value="lol">Lot 80</option>
-			<option value="56">Lot 56</option>
-			<option value="55">Lot 55</option>
-			<option value="57">Lot 57</option>
-			<option value="39">Lot 39</option>
-			<option value="40">Lot 40</option>
-			<option value="38">Lot 38</option>
-			<option value="41">Lot 41</option>
-			<option value="43">Lot 43</option> -->
 		</select>
 		<input type="submit" value="Check Lot"/>
 	</form>

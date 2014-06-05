@@ -47,7 +47,7 @@ public class AdminServlet extends HttpServlet {
 		
 		int i = DBAccess.insertObstructionRow(streetName, xCoord, yCoord, obstructionDescription);
 		request.setAttribute("rowsIns", i);
-		RequestDispatcher rd = getServletContext().getRequestDispatcher("/jsp/admin/results.jsp");
+		RequestDispatcher rd = getServletContext().getRequestDispatcher("/jsp/admin/admin.jsp");
 		rd.forward(request, response);
 		
 		DBAccess.closeDatabase();

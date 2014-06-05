@@ -1,5 +1,7 @@
 package com.campusfeatures;
 
+import java.math.BigDecimal;
+
 public class Obstruction {
 	
 	public static final double DEFAULT_XCOORD = 42.725594;
