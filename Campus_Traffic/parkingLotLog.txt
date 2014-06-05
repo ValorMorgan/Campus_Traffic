@@ -1,0 +1,2 @@
+Thu May 29 13:58:42 EDT 2014: pl11 42.726636 -84.484728 68 12 false
+Thu May 29 13:58:42 EDT 2014: pl11(Removed)

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context>
+
+  <Resource name="jdbc/CampusTrafficDataSource" auth="Container" type="javax.sql.DataSource"
+               maxActive="5" maxIdle="2" maxWait="10000"
+               username="guest" password="password" driverClassName="org.apache.derby.jdbc.ClientDriver"
+               url="jdbc:derby://localhost:1527/CAMPUS"/>
+</Context>

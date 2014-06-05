@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Campus_Traffic</display-name>
+  <welcome-file-list>
+    <welcome-file>/jsp/index.jsp</welcome-file>
+  </welcome-file-list>
+  <error-page>
+  	<exception-type>java.lang.Exception</exception-type>
+  	<location>/jsp/error.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/jsp/fourohfour.jsp</location>
+  </error-page>
+  <servlet>
+    <description>Gets lots</description>
+    <display-name>lotGet</display-name>
+    <servlet-name>lotGet</servlet-name>
+    <servlet-class>com.web.lotGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>lotGet</servlet-name>
+    <url-pattern>/lotGet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>Logs user in</description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.web.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>Admin Control</description>
+    <display-name>AdminServlet</display-name>
+    <servlet-name>AdminServlet</servlet-name>
+    <servlet-class>com.web.AdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminServlet</servlet-name>
+    <url-pattern>/Admin</url-pattern>
+  </servlet-mapping>
+  
+  <resource-ref>
+    <!-- ENC lookup name used by Web components -->
+    <res-ref-name>jdbc/CampusTrafficDataSource</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+    <res-sharing-scope>Shareable</res-sharing-scope>
+  </resource-ref>
+</web-app>
