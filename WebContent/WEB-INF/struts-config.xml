@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	
+	<form-beans>
+		<form-bean name="logonForm" type="com.campustraffic.web.forms.LogonForm">
+		   <form-property name="name" type="java.lang.String" initial=""/>
+	       <form-property name="password" type="java.lang.String" initial=""/>
+		</form-bean>
+		<form-bean name="searchForm" type="com.campustraffic.web.forms.SearchForm"></form-bean>
+		<form-bean name="adminParkingLotForm" type="com.campustraffic.web.forms.AdminParkingLotForm">
+			<form-property name="streetName" type="java.lang.String" initial=""/>
+			<form-property name="xCoord" type="java.math.BigDecimal" initial=""/>
+			<form-property name="yCoord" type="java.math.BigDecimal" initial=""/>
+			<form-property name="lotOpen" type="boolean" initial="true"/>
+		</form-bean>
+		<form-bean name="adminObstructionForm" type="com.campustraffic.web.forms.AdminObstructionForm">
+			<form-property name="streetName" type="java.lang.String" initial=""/>
+			<form-property name="xCoord" type="java.math.BigDecimal" initial=""/>
+			<form-property name="yCoord" type="java.math.BigDecimal" initial=""/>
+			<form-property name="description" type="java.lang.String" initial=""/>
+		</form-bean>
+	</form-beans>
+	
+	<global-exceptions>
+	</global-exceptions>
+	
+	<global-forwards>
+	</global-forwards>
+	
+	<action-mappings>
+		<action path="/logon"
+				type="com.campustraffic.web.actions.LogonAction"
+				input="/map.do"
+				name="logonForm"
+				scope="request">
+			<forward name="success" path="/admin.do"/>
+			<forward name="failure" path="/map.do"/>
+		</action>
+		<action path="/logout"
+				type="com.campustraffic.web.actions.LogoutAction"
+				scope="request">
+			<forward name="home" path="/map.do"/>
+		</action>
+	   <action path="/map"
+				type="com.campustraffic.web.actions.MapDataAction"
+				scope="request">
+			<forward name="map" path="/jsp/index.jsp"/>
+		</action>
+		<action path="/admin"
+				type="com.campustraffic.web.actions.MapDataAction"
+				scope="request">
+			<forward name="map" path="/jsp/admin.jsp"/>
+		</action>
+	    <action path="/adminParkingLots"
+	 			type="com.campustraffic.web.actions.AdminParkingLotAction"
+	 			input="/admin.do"
+	 			name="adminParkingLotForm"
+	 			scope="request">
+	 		<forward name="success" path="/admin.do"/>
+	 	</action>
+	 	<action path="/adminObstructions"
+	 			type="com.campustraffic.web.actions.AdminObstructionAction"
+	 			input="/admin.do"
+	 			name="adminObstructionForm"
+	 			scope="request">
+	 		<forward name="success" path="/admin.do"/>
+	 	</action>
+	</action-mappings>
+
+    <message-resources parameter="com.campustraffic.web.resources.ApplicationResources"/>
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/tile-defs.xml"/>
+		<set-property property="definitions-parser-validate" value="true"/>
+	</plug-in>
+
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" 
+						value="/org/apache/struts/validator/validator-rules.xml,
+							   /WEB-INF/validation.xml"/>
+    </plug-in>
+
+</struts-config>

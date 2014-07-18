@@ -1,0 +1,92 @@
+@CHARSET "utf-8";
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0; 
+	padding: 0;
+	background: #18453B;
+	font-size: 18px;
+	font-family: Gotham, Helvetica, sans-serif;
+	color: white;
+	z-index: 1000011;
+	box-shadow: 1px 1px 10px .5px grey;
+}
+
+#header img {
+	margin: 8px 0 0 10px;
+	float: left;
+}
+
+#header #nav {
+	width: 175;
+	float: right;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#header #nav ul {
+	position: relative;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#header #nav ul li {
+	position: relative;
+	list-style: none;
+	cursor: pointer;
+}
+
+#header #nav .click {
+	position: relative;
+	color: white;
+	background: none;
+}
+
+#header #nav .click:hover, #header #nav ul .active {
+	background: rgb(0, 114, 63);
+}
+
+/* Elements for menu when logged in */
+#header #nav ul li ul {
+	position: absolute;
+	left: 0;
+	right: 0;
+	box-shadow: 1px 1px 10px .5px grey;
+}
+
+#header #nav ul li a {
+	transition: background-color 0.2s ease-in-out;
+	-webkit-transition: background-color 0.2s ease-in-out;
+	-moz-transition: background-color 0.2s ease-in-out;
+	display: block;
+	padding: 8px 15px;
+	background: white;
+	color: #333;
+	text-decoration: none;
+}
+
+#header #nav ul li a:hover {
+	background:#F2F2F2;
+}
+
+/* Elements for menu to log in. */
+#header #nav ul li form {
+	position: absolute;
+	right: 0;
+	background: white;
+	padding: 2px 5px;
+	box-shadow: 1px 1px 10px .5px grey;
+}
+
+/* CSS Fallbacks (if javascript is disbaled) */
+#header #nav .no-js ul, #header #nav .no-js form {
+	display:none;
+}
+#header #nav .no-js:hover ul, #header #nav .no-js:hover form {
+	display:block;
+}

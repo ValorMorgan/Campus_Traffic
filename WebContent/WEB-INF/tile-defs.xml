@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+       "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+	<definition name="standardDef" path="/jsp/tiles/defaultLayout.jsp">
+		<put name="title" value="Default Title" type="string"/>
+		<put name="head" value="/jsp/tiles/defaultHead.jsp"/>
+		<put name="header" value="/jsp/tiles/header.jsp"/>
+		<put name="body" value="/jsp/tiles/defaultBodyContent.jsp"/>
+	</definition>
+</tiles-definitions>

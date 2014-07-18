@@ -1,0 +1,39 @@
+@CHARSET "utf-8";
+
+html, body {
+	background: rgb(232, 217, 181);
+	margin: 0;
+	padding: 0;
+	font-family: Gotham, Helvetica, sans-serif;
+	height:100%;
+}
+.wrapper{
+	height:100%;
+}
+#maincontent {
+	background: white;
+	position: relative;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	width: 700px;
+	min-height:100%;
+}
+
+#maincontent table {
+	margin-left: auto;
+	margin-right:auto;
+	width: 650px;
+	padding: 0 0 1em 0;
+}
+#pushDown{
+	width:100%;
+	padding-top:38px;
+}
+#push{
+	position:absolute;
+	bottom:0;
+	left:0;
+	height:100%;
+}
